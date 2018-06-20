@@ -17,7 +17,7 @@
                                 dc:creator "Nicholas Car"^^xsd:string ;
                                 owl:versionInfo "This 0.5 is an early version of the ontology."@en ;
                                 dct:publisher <http://pid.geoscience.gov.au/org/ga/geoscienceaustralia> ;
-                                rdfs:comment """An ontology describing the relationships between Semantic Web versions of FSDF datasets.
+                                rdfs:comment """An ontology describing the data class-level relationships between Semantic Web versions of FSDF datasets.
 
 This ontology is an 'upper ontology' in that it serves as a high-level model for other Semantic Web-modelled datasets to map 'up' to. This is so that there is a path for testing interoperability between future FSDF Semantic Web datasets."""@en ;
                                 dct:creator <http://orcid.org/0000-0002-8742-7730> ;
