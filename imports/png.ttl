@@ -1,0 +1,662 @@
+@prefix : <http://ga.gov.au/def/placename#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gnaf: <http://gnafld.net/def/gnaf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@base <http://ga.gov.au/def/placenames> .
+
+<http://ga.gov.au/def/placenames> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ga.gov.au/def/placename#alternatePlaceName
+:alternatePlaceName rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#associatedWith
+:associatedWith rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasAboriginalPlaceName
+:hasAboriginalPlaceName rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasPlaceName .
+
+
+###  http://ga.gov.au/def/placename#hasAddress
+:hasAddress rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasAdministrativeBoundary
+:hasAdministrativeBoundary rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :hasGeographicExtent .
+
+
+###  http://ga.gov.au/def/placename#hasFeature
+:hasFeature rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasFeatureClassification
+:hasFeatureClassification rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasGeographicExtent
+:hasGeographicExtent rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasGeographicIdentifier
+:hasGeographicIdentifier rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasGeometry
+:hasGeometry rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasJurisdiction
+:hasJurisdiction rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasNamingAuthority
+:hasNamingAuthority rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasPlace
+:hasPlace rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isPlaceOf ;
+          rdf:type owl:TransitiveProperty .
+
+
+###  http://ga.gov.au/def/placename#hasPlaceName
+:hasPlaceName rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:FunctionalProperty .
+
+
+###  http://ga.gov.au/def/placename#hasPoint
+:hasPoint rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#hasTemporalExtent
+:hasTemporalExtent rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#historicalPlaceName
+:historicalPlaceName rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#inJurisdiction
+:inJurisdiction rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#isPlaceOf
+:isPlaceOf rdf:type owl:ObjectProperty ,
+                    owl:TransitiveProperty .
+
+
+###  http://ga.gov.au/def/placename#namedBy
+:namedBy rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#nearbyFeature
+:nearbyFeature rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#nearbyLocation
+:nearbyLocation rdf:type owl:ObjectProperty .
+
+
+###  http://ga.gov.au/def/placename#nearbyPlace
+:nearbyPlace rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :nearbyLocation .
+
+
+###  http://ga.gov.au/def/placename#nearbyRegion
+:nearbyRegion rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :nearbyLocation .
+
+
+###  http://ga.gov.au/def/placename#neighbouringFeature
+:neighbouringFeature rdf:type owl:ObjectProperty ,
+                              owl:SymmetricProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ga.gov.au/def/placename#alternate
+:alternate rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "alternate Name"@en .
+
+
+###  http://ga.gov.au/def/placename#colloquialName
+:colloquialName rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "colloquial Name"@en .
+
+
+###  http://ga.gov.au/def/placename#coordinateReferenceSystem
+:coordinateReferenceSystem rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Reference to a CRS definition from an authoritative source such as the EPSG registry or the Open Geospatial Consortium CRS Register."@en ;
+                           rdfs:label "coordinate Reference System"@en .
+
+
+###  http://ga.gov.au/def/placename#eastBoundingLong
+:eastBoundingLong rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:label "east bounding longitude"@en .
+
+
+###  http://ga.gov.au/def/placename#elevation
+:elevation rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#featureCode
+:featureCode rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#historicalBeginning
+:historicalBeginning rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#historicalEnd
+:historicalEnd rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#identifier
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:comment "A reference to an unambiguous identifier conforming to a formal identification system in the given context."@en .
+
+
+###  http://ga.gov.au/def/placename#lat
+:lat rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:decimal ;
+     rdfs:label "latitude"@en .
+
+
+###  http://ga.gov.au/def/placename#long
+:long rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:decimal ;
+      rdfs:label "longitude"@en .
+
+
+###  http://ga.gov.au/def/placename#northBoundingLat
+:northBoundingLat rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:label "north bounding latitude"@en .
+
+
+###  http://ga.gov.au/def/placename#officialName
+:officialName rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "official Name"@en .
+
+
+###  http://ga.gov.au/def/placename#pronunciation
+:pronunciation rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#scope
+:scope rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#southBoundingLat
+:southBoundingLat rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:label "south bounding latitude"@en .
+
+
+###  http://ga.gov.au/def/placename#status
+:status rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#value
+:value rdf:type owl:DatatypeProperty .
+
+
+###  http://ga.gov.au/def/placename#westBoundingLong
+:westBoundingLong rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:label "west bounding longitude"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ga.gov.au/def/placename#ASGSAdministrativeBoundary
+:ASGSAdministrativeBoundary rdf:type owl:Class ;
+                            rdfs:subClassOf :Geometry ;
+                            rdfs:label "ASGS Administrative Boundary"@en .
+
+
+###  http://ga.gov.au/def/placename#AboriginalShire
+:AboriginalShire rdf:type owl:Class ;
+                 rdfs:subClassOf :Shire ;
+                 rdfs:label "Aboriginal Shire"@en .
+
+
+###  http://ga.gov.au/def/placename#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:label "Agent"@en .
+
+
+###  http://ga.gov.au/def/placename#Area
+:Area rdf:type owl:Class ;
+      rdfs:subClassOf :Geometry ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasPoint ;
+                        owl:someValuesFrom :Point
+                      ] ;
+      rdfs:label "Area"@en .
+
+
+###  http://ga.gov.au/def/placename#Borough
+:Borough rdf:type owl:Class ;
+         rdfs:subClassOf :Jurisdiction ;
+         rdfs:label "Borough"@en .
+
+
+###  http://ga.gov.au/def/placename#BoundingBox
+:BoundingBox rdf:type owl:Class ;
+             rdfs:subClassOf :Area ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :eastBoundingLong ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:decimal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :northBoundingLat ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:decimal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :southBoundingLat ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:decimal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :westBoundingLong ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:decimal
+                             ] ;
+             rdfs:label "Bounding Box"@en .
+
+
+###  http://ga.gov.au/def/placename#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Jurisdiction ;
+      rdfs:label "City"@en .
+
+
+###  http://ga.gov.au/def/placename#CommunityGovernmentCouncil
+:CommunityGovernmentCouncil rdf:type owl:Class ;
+                            rdfs:subClassOf :Council ;
+                            rdfs:label "Community Government Council"@en .
+
+
+###  http://ga.gov.au/def/placename#Council
+:Council rdf:type owl:Class ;
+         rdfs:subClassOf :Jurisdiction ;
+         rdfs:label "Council"@en .
+
+
+###  http://ga.gov.au/def/placename#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Jurisdiction ;
+         rdfs:label "Country"@en .
+
+
+###  http://ga.gov.au/def/placename#DistrictCouncil
+:DistrictCouncil rdf:type owl:Class ;
+                 rdfs:subClassOf :Council ;
+                 rdfs:label "District Council"@en .
+
+
+###  http://ga.gov.au/def/placename#Feature
+:Feature rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasFeatureClassification ;
+                           owl:someValuesFrom :FeatureClassification
+                         ] ;
+         rdfs:label "Feature"@en .
+
+
+###  http://ga.gov.au/def/placename#FeatureClassification
+:FeatureClassification rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :featureCode ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ;
+                       <http://purl.org/dc/elements/1.1/title> "Feature Classification"@en ,
+                                                               "Feature Type"@en ;
+                       rdfs:label "Feature Classification"@en .
+
+
+###  http://ga.gov.au/def/placename#Gazetteer
+:Gazetteer rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasGeographicExtent ;
+                             owl:someValuesFrom :Geometry
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasPlace ;
+                             owl:someValuesFrom :Place
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTemporalExtent ;
+                             owl:someValuesFrom time:TemporalEntity
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :inJurisdiction ;
+                             owl:someValuesFrom :Jurisdiction
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :scope ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :coordinateReferenceSystem ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ;
+           rdfs:label "Gazetteer"@en .
+
+
+###  http://ga.gov.au/def/placename#GeographicIdentifier
+:GeographicIdentifier rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :identifier ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
+                      rdfs:label "Geographic Identifier"@en .
+
+
+###  http://ga.gov.au/def/placename#Geometry
+:Geometry rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/title> "Geographic Extent"@en ,
+                                                  "Geographic Feature"@en ,
+                                                  "Geometry"@en ;
+          rdfs:label "Geometry"@en .
+
+
+###  http://ga.gov.au/def/placename#Group
+:Group rdf:type owl:Class ;
+       rdfs:subClassOf :Agent ;
+       rdfs:label "Group"@en .
+
+
+###  http://ga.gov.au/def/placename#IslandCouncil
+:IslandCouncil rdf:type owl:Class ;
+               rdfs:subClassOf :Council ;
+               rdfs:label "Island Council"@en .
+
+
+###  http://ga.gov.au/def/placename#Jurisdiction
+:Jurisdiction rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasGeometry ;
+                                owl:someValuesFrom :Geometry
+                              ] ;
+              rdfs:label "Jurisdiction"@en .
+
+
+###  http://ga.gov.au/def/placename#Line
+:Line rdf:type owl:Class ;
+      rdfs:subClassOf :Geometry ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasPoint ;
+                        owl:someValuesFrom :Point
+                      ] ;
+      rdfs:label "Line"@en .
+
+
+###  http://ga.gov.au/def/placename#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasGeographicExtent ;
+                            owl:someValuesFrom :Geometry
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasGeometry ;
+                            owl:someValuesFrom :Geometry
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasJurisdiction ;
+                            owl:someValuesFrom :Jurisdiction
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasTemporalExtent ;
+                            owl:someValuesFrom time:TemporalEntity
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :nearbyLocation ;
+                            owl:someValuesFrom :Location
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :nearbyRegion ;
+                            owl:someValuesFrom :Region
+                          ] ;
+          rdfs:label "Location"@en .
+
+
+###  http://ga.gov.au/def/placename#Municipality
+:Municipality rdf:type owl:Class ;
+              rdfs:subClassOf :Jurisdiction ;
+              rdfs:label "Municipality"@en .
+
+
+###  http://ga.gov.au/def/placename#Organisation
+:Organisation rdf:type owl:Class ;
+              rdfs:subClassOf :Agent ;
+              rdfs:label "Organisation"@en .
+
+
+###  http://ga.gov.au/def/placename#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Agent ;
+        rdfs:label "Person"@en .
+
+
+###  http://ga.gov.au/def/placename#Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf :Location ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAddress ;
+                         owl:someValuesFrom gnaf:Address
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAdministrativeBoundary ;
+                         owl:someValuesFrom :ASGSAdministrativeBoundary
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFeature ;
+                         owl:someValuesFrom :Feature
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFeatureClassification ;
+                         owl:someValuesFrom :FeatureClassification
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGeographicIdentifier ;
+                         owl:someValuesFrom :GeographicIdentifier
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :inJurisdiction ;
+                         owl:someValuesFrom :Jurisdiction
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isPlaceOf ;
+                         owl:someValuesFrom :Gazetteer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :nearbyFeature ;
+                         owl:someValuesFrom :Feature
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :neighbouringFeature ;
+                         owl:someValuesFrom :Feature
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasPlaceName ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :PlaceName
+                       ] ;
+       rdfs:label "Place"@en .
+
+
+###  http://ga.gov.au/def/placename#PlaceName
+:PlaceName rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasNamingAuthority ;
+                             owl:someValuesFrom :Agent
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :historicalPlaceName ;
+                             owl:someValuesFrom :PlaceName
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :alternate ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :colloquialName ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :pronunciation ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :status ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :officialName ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :historicalBeginning ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :historicalEnd ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ;
+           rdfs:label "Place Name"@en .
+
+
+###  http://ga.gov.au/def/placename#Point
+:Point rdf:type owl:Class ;
+       rdfs:subClassOf :Geometry ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :lat ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:decimal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :long ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:decimal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :elevation ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:decimal
+                       ] ;
+       rdfs:label "Point"@en .
+
+
+###  http://ga.gov.au/def/placename#PointOfInterest
+:PointOfInterest rdf:type owl:Class ;
+                 rdfs:subClassOf :Location ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :associatedWith ;
+                                   owl:someValuesFrom :Place
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :namedBy ;
+                                   owl:someValuesFrom :Agent
+                                 ] ;
+                 rdfs:label "Point of Interest"@en .
+
+
+###  http://ga.gov.au/def/placename#Polygon
+:Polygon rdf:type owl:Class ;
+         rdfs:subClassOf :Area ;
+         rdfs:label "Polygon"@en .
+
+
+###  http://ga.gov.au/def/placename#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :Location ;
+        rdfs:label "Region"@en .
+
+
+###  http://ga.gov.au/def/placename#RegionalCouncil
+:RegionalCouncil rdf:type owl:Class ;
+                 rdfs:subClassOf :Council ;
+                 rdfs:label "Regional Council"@en .
+
+
+###  http://ga.gov.au/def/placename#RuralCity
+:RuralCity rdf:type owl:Class ;
+           rdfs:subClassOf :City ;
+           rdfs:label "Rural City"@en .
+
+
+###  http://ga.gov.au/def/placename#Shire
+:Shire rdf:type owl:Class ;
+       rdfs:subClassOf :Jurisdiction ;
+       rdfs:label "Shire"@en .
+
+
+###  http://ga.gov.au/def/placename#State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf :Jurisdiction ;
+       rdfs:label "State"@en .
+
+
+###  http://ga.gov.au/def/placename#Territory
+:Territory rdf:type owl:Class ;
+           rdfs:subClassOf :Jurisdiction ;
+           rdfs:label "Territory"@en .
+
+
+###  http://ga.gov.au/def/placename#Town
+:Town rdf:type owl:Class ;
+      rdfs:subClassOf :Jurisdiction ;
+      rdfs:label "Town"@en .
+
+
+###  http://ga.gov.au/def/placename#UnincorporatedArea
+:UnincorporatedArea rdf:type owl:Class ;
+                    rdfs:subClassOf :Jurisdiction ;
+                    rdfs:label "Unincorporated Area"@en .
+
+
+###  http://gnafld.net/def/gnaf#Address
+gnaf:Address rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+time:TemporalEntity rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

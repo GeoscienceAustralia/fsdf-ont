@@ -66,5 +66,6 @@ target/
 
 # Protege
 catalog-*
+
 # Apple
 .DS_Store
