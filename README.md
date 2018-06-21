@@ -19,7 +19,7 @@ Due to the early stage of development of this ontology, there are many unanswere
 This repository contains:
 
 * [fsdf.ttl](fsdf.ttl) - the technical ontology file
-* [fsdf.html](fsdf.html) - the HTML web page version of the technical ontology
+* [fsdf.html](fsdf.html) - the HTML web page version of the technical ontology. See <test.linked.data.gov.au/def/fsdf> for the online version.
 * [fsdf.png](fsdf.png) - an onverview diagram of the FSDF-O classes and properties
 * [examples/](examples/) - examples of how the ontology relates FSDF datasets
 * [docs/](docs/) - supporting documentation such as product guides to Semantic Web versions of the datasets the FSDF-O relates
@@ -36,7 +36,9 @@ Use [fsdf.ttl](fsdf.ttl), the technical ontology file, in an ontology editor suc
 See the [examples/](examples/) folder with descriptions of how the ontology works, its relationship to systems like [LINK](https://link.fsdf.org.au) and how it relates FSDF datasets.
 
 ***If you just want to see how Semantic Web versions of FSDF datasets are related***:  
-See [fsdf.html](fsdf.html), the HTML web page version of the technical ontology.
+See [fsdf.html](fsdf.html), the HTML web page version of the technical ontology. Note it is hosted online at a temporary namespace for now at:
+
+* <http://test.linked.data.gov.au/def/fsdf>
 
 ***If you don't know what an ontology is***:  
 Contact the Australian Government Linked Data Working Group:
