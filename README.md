@@ -21,7 +21,7 @@ This repository contains:
 * [fsdf.ttl](fsdf.ttl) - the technical ontology file
 * [fsdf.html](fsdf.html) - the HTML web page version of the technical ontology. See <test.linked.data.gov.au/def/fsdf> for the online version.
 * [fsdf.png](fsdf.png) - an onverview diagram of the FSDF-O classes and properties
-* [examples/](examples/) - examples of how the ontology relates FSDF datasets
+* [examples/](examples/examples.md) - examples of how the ontology relates FSDF datasets
 * [docs/](docs/) - supporting documentation such as product guides to Semantic Web versions of the datasets the FSDF-O relates
 
 
