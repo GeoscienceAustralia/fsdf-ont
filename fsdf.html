@@ -1,73 +1,360 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>FSDF ontology</title>
-        <link href="https://promsns.org/static/LODE/owl.css" rel="stylesheet" type="text/css" />
-        <link href="https://promsns.org/static/LODE/Primer.css" rel="stylesheet" type="text/css" />
-        <link href="https://promsns.org/static/LODE/rec.css" rel="stylesheet" type="text/css" />
-        <link href="https://promsns.org/static/LODE/extra.css" rel="stylesheet" type="text/css" />
+        <link href="http://52.64.97.55:80/owl.css" rel="stylesheet" type="text/css">
+        <link href="http://52.64.97.55:80/Primer.css" rel="stylesheet" type="text/css">
+        <link href="http://52.64.97.55:80/rec.css" rel="stylesheet" type="text/css">
+        <link href="http://52.64.97.55:80/extra.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="http://52.64.97.55:80/favicon.ico">
     </head>
     <body>
         <div class="head">
             <h1>FSDF ontology</h1>
             <dl>
-                <dt>IRI:</dt>
-                <dd>https://promsns.org/def/fsdf</dd>
-                <dt>Version IRI:</dt>
-                <dd>https://promsns.org/def/fsdf/1.1</dd>
+                <dt>
+                    IRI:
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/fsdf
+                </dd>
+                <dt>
+                    Version IRI:
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/fsdf/1.1
+                </dd>
             </dl>
             <dl>
-                <dt>Current version:</dt>
-                <dd>This 0.1 is a dummy (empty) version of the ontology.</dd>
+                <dt>
+                    Current version:
+                </dt>
+                <dd>
+                    This 0.5 is an early version of the ontology.
+                </dd>
             </dl>
             <dl>
-                <dt>Authors:</dt>
-                <dd>Nicholas Car</dd>
-                <dd><a href="http://orcid.org/0000-0002-8742-7730">http://orcid.org/0000-0002-8742-7730</a></dd>
+                <dt>
+                    Authors:
+                </dt>
+                <dd>
+                    Nicholas Car
+                </dd>
+                <dd>
+                    <a href="http://orcid.org/0000-0002-8742-7730">http://orcid.org/0000-0002-8742-7730</a>
+                </dd>
             </dl>
             <dl>
-                <dt>Publisher:</dt>
-                <dd>Geoscience Australia</dd>
-                <dd><a href="http://pid.geoscience.gov.au/org/ga/geoscienceaustralia">http://pid.geoscience.gov.au/org/ga/geoscienceaustralia</a></dd>
+                <dt>
+                    Publisher:
+                </dt>
+                <dd>
+                    Geoscience Australia
+                </dd>
+                <dd>
+                    <a href="http://pid.geoscience.gov.au/org/ga/geoscienceaustralia">http://pid.geoscience.gov.au/org/ga/geoscienceaustralia</a>
+                </dd>
+                <dd>
+                    <a href="http://test.linked.data.gov.au/org/O-000887">http://test.linked.data.gov.au/org/O-000887</a>
+                </dd>
             </dl>
             <dl>
-                <dt>Other visualisation:</dt>
-                <dd><a href="http://localhost:8080/lode/source?url=https://raw.githubusercontent.com/GeoscienceAustralia/fsdf-ont/master/fsdf.ttl">Ontology source</a></dd>
+                <dt>
+                    Other visualisation:
+                </dt>
+                <dd>
+                    <a href="http://52.64.97.55:80/uploadedFiles/fsdf.ttl">Ontology source</a>
+                </dd>
             </dl>
         </div>
-        <hr />
+        <hr>
         <h2>Abstract</h2>
-        <span class="markdown">An ontology describing the relationships between Semantic Web versions of FSDF datasets.</span>
+        <span class="markdown"><p>An ontology describing the data class-level relationships between Semantic Web versions of FSDF datasets.</p> <p>This ontology is an 'upper ontology' in that it serves as a high-level model for other Semantic Web-modelled datasets to map 'up' to. This is so that there is a path for testing interoperability between future FSDF Semantic Web datasets.</p> </span>
         <div id="toc">
             <h2>Table of Content</h2>
             <ol>
+                <li><a href="#namedindividuals">Named Individuals</a></li>
                 <li><a href="#namespacedeclarations">Namespace Declarations</a></li>
             </ol>
+        </div>
+        <div id="img">
+            <a href="fsdf.png"><img src="fsdf.png" alt="Image of all FSDF-O classes and main properties" style="width:800px;"></a>
+            <p><em><strong>Figure 1</strong>: All of the FSDF ontology individuals (datasets) and their classes and the properties that related them to one another</em></p>
+        </div>
+        <div id="namedindividuals">
+            <h2>Named Individuals</h2>
+            <ul class="hlist">
+                <li><a href="#d4e58" title="http://linked.data.gov.au/dataset/asgs">Australian Statistical Geographical Standard Boundaries</a></li>
+                <li><a href="#d4e74" title="http://linked.data.gov.au/dataset/geofabric-catchments">Catchment Boundaries</a></li>
+                <li><a href="#d4e90" title="http://linked.data.gov.au/dataset/gnaf">Geocoded National Address File</a></li>
+                <li><a href="#d4e114" title="http://linked.data.gov.au/dataset/png">National Gazeteer of Australia</a></li>
+            </ul>
+            <div id="d4e58" class="entity">
+                <a name="http://linked.data.gov.au/dataset/asgs"></a>
+                <h3>Australian Statistical Geographical Standard Boundaries<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://linked.data.gov.au/dataset/asgs</p>
+                <dl class="description">
+                    <dt>
+                        belongs to
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/ns/dcat#Dataset">dataset</span>
+                        <sup title="class" class="type-c">c</sup>
+                    </dd>
+                    <dt>
+                        is same as
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="https://link.fsdf.org.au/fsdf-dataset/australian-statistical-geographical-standard-boundaries">australian statistical geographical standard boundaries</span>
+                    </dd>
+                    <dt>
+                        has facts
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/2002/07/owl#sameAs">same as</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="https://link.fsdf.org.au/fsdf-dataset/australian-statistical-geographical-standard-boundaries">australian statistical geographical standard boundaries</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/asgs#MeshBlock">mesh block</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/asgs#State">state</span>
+                    </dd>
+                </dl>
+            </div>
+            <div id="d4e74" class="entity">
+                <a name="http://linked.data.gov.au/dataset/geofabric-catchments"></a>
+                <h3>Catchment Boundaries<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://linked.data.gov.au/dataset/geofabric-catchments</p>
+                <dl class="description">
+                    <dt>
+                        belongs to
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/ns/dcat#Dataset">dataset</span>
+                        <sup title="class" class="type-c">c</sup>
+                    </dd>
+                    <dt>
+                        is same as
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="https://link.fsdf.org.au/fsdf-dataset/catchment-boundaries">catchment boundaries</span>
+                    </dd>
+                    <dt>
+                        has facts
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/2002/07/owl#sameAs">same as</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="https://link.fsdf.org.au/fsdf-dataset/catchment-boundaries">catchment boundaries</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/geofabric#Catchment">catchment</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/geofabric#Waterbody">waterbody</span>
+                    </dd>
+                </dl>
+            </div>
+            <div id="d4e90" class="entity">
+                <a name="http://linked.data.gov.au/dataset/gnaf"></a>
+                <h3>Geocoded National Address File<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://linked.data.gov.au/dataset/gnaf</p>
+                <dl class="description">
+                    <dt>
+                        belongs to
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/ns/dcat#Dataset">dataset</span>
+                        <sup title="class" class="type-c">c</sup>
+                    </dd>
+                    <dt>
+                        is same as
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="https://link.fsdf.org.au/fsdf-dataset/geocoded-national-address-file">geocoded national address file</span>
+                    </dd>
+                    <dt>
+                        has facts
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/2002/07/owl#sameAs">same as</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="https://link.fsdf.org.au/fsdf-dataset/geocoded-national-address-file">geocoded national address file</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/gnaf#Address">address</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/gnaf#GeocodedPoint">geocoded point</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/gnaf#Locality">locality</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/gnaf#MeshBlockMatch">mesh block match</span>
+                    </dd>
+                    <dd>
+                        <span class="dotted" title="http://purl.org/dc/terms/hasPart">has part</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/gnaf#StreetLocality">street locality</span>
+                    </dd>
+                </dl>
+            </div>
+            <div id="d4e114" class="entity">
+                <a name="http://linked.data.gov.au/dataset/png"></a>
+                <h3>National Gazeteer of Australia<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+                <p><strong>IRI:</strong> http://linked.data.gov.au/dataset/png</p>
+                <dl class="description">
+                    <dt>
+                        belongs to
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/ns/dcat#Dataset">dataset</span>
+                        <sup title="class" class="type-c">c</sup>
+                    </dd>
+                    <dt>
+                        is same as
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://linked.data.gov.au/def/png#Place">place</span>
+                    </dd>
+                    <dt>
+                        has facts
+                    </dt>
+                    <dd>
+                        <span class="dotted" title="http://www.w3.org/2002/07/owl#sameAs">same as</span>
+                        <sup title="object property" class="type-op">op</sup>
+                        <span class="dotted" title="http://linked.data.gov.au/def/png#Place">place</span>
+                    </dd>
+                </dl>
+            </div>
         </div>
         <div id="namespacedeclarations">
             <h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
             <dl>
-                <dt><em>default namespace</em></dt>
-                <dd>https://promsns.org/def/fsdf#</dd>
-                <dt>dc</dt>
-                <dd>http://purl.org/dc/elements/1.1/</dd>
-                <dt>def</dt>
-                <dd>https://promsns.org/def/</dd>
-                <dt>fsdf</dt>
-                <dd>https://promsns.org/def/fsdf#</dd>
-                <dt>owl</dt>
-                <dd>http://www.w3.org/2002/07/owl#</dd>
-                <dt>rdf</dt>
-                <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
-                <dt>rdfs</dt>
-                <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
-                <dt>terms</dt>
-                <dd>http://purl.org/dc/terms/</dd>
-                <dt>xsd</dt>
-                <dd>http://www.w3.org/2001/XMLSchema#</dd>
+                <dt>
+                    <em>default namespace</em>
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/fsdf#
+                </dd>
+                <dt>
+                    asgs
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/asgs#
+                </dd>
+                <dt>
+                    dataset
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/dataset/
+                </dd>
+                <dt>
+                    dc
+                </dt>
+                <dd>
+                    http://purl.org/dc/elements/1.1/
+                </dd>
+                <dt>
+                    dcat
+                </dt>
+                <dd>
+                    http://www.w3.org/ns/dcat#
+                </dd>
+                <dt>
+                    def
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/
+                </dd>
+                <dt>
+                    fsdf
+                </dt>
+                <dd>
+                    https://link.fsdf.org.au/fsdf-dataset/
+                </dd>
+                <dt>
+                    ga
+                </dt>
+                <dd>
+                    http://pid.geoscience.gov.au/org/ga/
+                </dd>
+                <dt>
+                    geofabric
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/geofabric#
+                </dd>
+                <dt>
+                    gnaf
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/gnaf#
+                </dd>
+                <dt>
+                    org
+                </dt>
+                <dd>
+                    http://test.linked.data.gov.au/org/
+                </dd>
+                <dt>
+                    owl
+                </dt>
+                <dd>
+                    http://www.w3.org/2002/07/owl#
+                </dd>
+                <dt>
+                    png
+                </dt>
+                <dd>
+                    http://linked.data.gov.au/def/png#
+                </dd>
+                <dt>
+                    rdf
+                </dt>
+                <dd>
+                    http://www.w3.org/1999/02/22-rdf-syntax-ns#
+                </dd>
+                <dt>
+                    rdfs
+                </dt>
+                <dd>
+                    http://www.w3.org/2000/01/rdf-schema#
+                </dd>
+                <dt>
+                    terms
+                </dt>
+                <dd>
+                    http://purl.org/dc/terms/
+                </dd>
+                <dt>
+                    xsd
+                </dt>
+                <dd>
+                    http://www.w3.org/2001/XMLSchema#
+                </dd>
             </dl>
         </div>
-        <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a href="http://www.essepuntato.it">Silvio Peroni</a>.</p>
+        <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a href="http://lode2.promsns.org">LODE 2</a>, <em>Live OWL Documentation Environment, v2</em>, originally developed by <a href="http://www.essepuntato.it">Silvio Peroni</a> and updated by <a href="http://www.edmondchuc.com">Edmond Chuc</a> at the <a href="http://www.csiro.au">CSIRO</a>.</p>
     </body>
 </html>
