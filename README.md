@@ -26,24 +26,25 @@ This repository contains:
 
 
 ## How to get started
-***If you want a quick overview of FSDF-O contents***:
-See the image below (Figure 1).
-
-***If you are a modeller***:  
-Use [fsdf.ttl](fsdf.ttl), the technical ontology file, in an ontology editor such as [Protégé](http://protege.stanford.edu/).
-
-***If you know what an ontology is but don't know what the FSDF-O can do***:  
-See the [examples/](examples/) folder with descriptions of how the ontology works, its relationship to systems like [LINK](https://link.fsdf.org.au) and how it relates FSDF datasets.
-
-***If you just want to see how Semantic Web versions of FSDF datasets are related***:  
-See [fsdf.html](fsdf.html), the HTML web page version of the technical ontology. Note it is hosted online at a temporary namespace for now at:
-
-* <http://test.linked.data.gov.au/def/fsdf>
-
 ***If you don't know what an ontology is***:  
 Contact the Australian Government Linked Data Working Group:
 
 * <http://linked.data.gov.au>
+
+***If you do know what an ontology is but don't know what the FSDF-O can do***:  
+See the [examples/](examples/) folder with descriptions of how the ontology works, its relationship to systems like [LINK](https://link.fsdf.org.au) and how it relates FSDF datasets.
+
+***If you want a quick overview of FSDF-O***:  
+See the image below (Figure 1).
+
+***If you just want the official documentation of the FSDF-O***:  
+See [fsdf.html](fsdf.html), the HTML web page version of the technical ontology. Note it is hosted online at a temporary namespace for now at:
+
+* <http://test.linked.data.gov.au/def/fsdf>
+
+***If you are a modeller***:  
+Use [fsdf.ttl](fsdf.ttl), the technical ontology file, in an ontology editor such as [Protégé](http://protege.stanford.edu/).
+
 
 ## Overview diagram
 Here, Figure 1, is a quick view of the overall FSDF-O.
