@@ -32,3 +32,9 @@ Data within the [National Gazetteer of Australia](https://link.fsdf.org.au/datas
 
 ![PNG, ASGS & G-NAF class relationships](fig-05.png)  
 **Figure 5**: PNG, ASGS & G-NAF class relationships
+
+
+## E.G. 4: ASGS & Geofabric relations
+
+![ASGS & Geofabric relations](fig-06.png)  
+**Figure 5**: ASGS & Geofabric relations
