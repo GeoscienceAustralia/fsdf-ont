@@ -9,6 +9,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @base <http://linked.data.gov.au/def/fsdf> .
 
 <http://linked.data.gov.au/def/fsdf> rdf:type owl:Ontology ;
@@ -24,7 +25,9 @@ This ontology is an 'upper ontology' in that it serves as a high-level model for
                                 rdfs:label "FSDF ontology"^^xsd:string ;
                                 dct:modified "2018-06-21" ;
                                 dct:publisher <http://test.linked.data.gov.au/org/O-000887> ;
-                                dct:created "2018-03-07"^^xsd:date .
+                                dct:created "2018-03-07"^^xsd:date ;
+                                vann:preferredNamespacePrefix "fsdf" ;
+                                owl:versionInfo "0.5"@en .
 
 #################################################################
 #    Object Properties
