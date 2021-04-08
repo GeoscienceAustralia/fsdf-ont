@@ -8,7 +8,7 @@ The ontology contains instances of FSDF datasets delivered using Semantic Web te
 ## Status
 This version of this ontology, 0.5, it is *not* considered production ready. It is instead suitable for testing out the general principles of an upper ontology for FSDF and for exploring the relationships between datasets. Many (most) of the relationships are anticipated but not anticipated yet - June 2018.
 
-Note also that the URIs indicated for many datasets that use the domain name `linked.data.gov.au` do not yet resolve but are expected to in late July, 2018 one the namespace has been formally activated by the [Australian Government Linked Data Working Group](http://linked.data.gov.au).
+Note also that the URIs indicated for many datasets that use the domain name `linked.data.gov.au` do not yet resolve but are expected to in late July, 2018 one the namespace has been formally activated by the [Australian Government Linked Data Working Group](https://linked.data.gov.au).
 
 Due to the early stage of development of this ontology, there are many unanswered questions about its use. See the developing list of such questions:
 
@@ -29,7 +29,7 @@ This repository contains:
 ***If you don't know what an ontology is***:  
 Contact the Australian Government Linked Data Working Group:
 
-* <http://linked.data.gov.au>
+* <https://linked.data.gov.au>
 
 ***If you do know what an ontology is but don't know what the FSDF-O can do***:  
 See the [examples/](examples/) folder with descriptions of how the ontology works, its relationship to systems like [LINK](https://link.fsdf.org.au) and how it relates FSDF datasets.
